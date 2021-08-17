@@ -1,8 +1,8 @@
 ### 简单方便入门的Android MVVM框架项目，可直接做基本框架使用
-#### 本基础框架抽离于已上线项目KoalaVpn([https://play.google.com/store/apps/details?id=com.qeeyou.accelerator.overseas.overwall])
+#### 本基础框架抽离于已上线项目[KoalaVpn](https://play.google.com/store/apps/details?id=com.qeeyou.accelerator.overseas.overwall)
 #### 保留了基本的dataBinding、liveData、viewModel基础用法和页面元素，采用假数据假逻辑展示效果
 #### 网络请求采用retrofit, 当然，像网络请求不喜欢用retrofit，也可以换成其他的，非常简单，具体可Clone下来瞧瞧，非常easy
-* 内置本人多年总结完善的通用标题头，无侵入式页面布局，动态注入方式，有多个重载方法，及其容易定制和方便使用，例如项目LineListActivity界面演示的例子，完全不需要在xml布局里面写标题头(只是暂时就得舍弃dataBinding了)，支持直接注入动态View或Xml，(详细例子可循)[https://github.com/woshiluoyong/StephenAppCliProject] 查看
+* 内置本人多年总结完善的通用标题头，无侵入式页面布局，动态注入方式，有多个重载方法，及其容易定制和方便使用，例如项目LineListActivity界面演示的例子，完全不需要在xml布局里面写标题头(只是暂时就得舍弃dataBinding了)，支持直接注入动态View或Xml，[更多详细例子](https://github.com/woshiluoyong/StephenAppCliProject)可点击去之前的android框架项目查看
 ```kotlin
 stephenCommonTopTitleView = StephenCommonTopTitleView(this)
 stephenCommonTopTitleView.run {
