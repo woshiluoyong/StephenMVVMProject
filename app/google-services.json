@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "414809392967",
+    "project_id": "koala-7e1b1",
+    "storage_bucket": "koala-7e1b1.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:414809392967:android:ee1cdba002613348b26e62",
+        "android_client_info": {
+          "package_name": "com.qeeyou.accelerator.overseas.overwall"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "414809392967-kgcd5gga2t3gdm78kt17983h4rg1lq31.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDmQl2IMVlfIFhjo2oPA3OnaAe8awYTPkA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "414809392967-kgcd5gga2t3gdm78kt17983h4rg1lq31.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.cy.necessaryview.shapeview.RecShapeLinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    app:colorFill="@color/white"
+    app:radiusCorner="16dp">
+
+    <TextView
+        android:id="@+id/textTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginHorizontal="30dp"
+        android:layout_marginTop="30dp"
+        android:gravity="center"
+        android:textColor="#ff323233"
+        android:textSize="16sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/textDesc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginHorizontal="30dp"
+        android:layout_marginTop="16dp"
+        android:gravity="center"
+        android:textColor="#ff969799"
+        android:textSize="14sp" />
+
+    <LinearLayout
+        android:id="@+id/layoutBtn"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginHorizontal="30dp"
+        android:layout_marginTop="45dp"
+        android:layout_marginBottom="30dp"
+        android:orientation="horizontal">
+
+        <com.cy.necessaryview.shapeview.RecShapeTextView
+            android:id="@+id/btnCancel"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginEnd="14dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="@string/cancel"
+            android:textColor="@color/dialog_confirm_bg"
+            android:textSize="14sp"
+            app:colorFill="@color/dialog_cancel_bg"
+            app:radiusCorner="12dp" />
+
+        <com.cy.necessaryview.shapeview.RecShapeTextView
+            android:id="@+id/btnConfirm"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="@string/confirm"
+            android:textColor="@color/white"
+            android:textSize="14sp"
+            app:colorFill="@color/dialog_confirm_bg"
+            app:radiusCorner="12dp" />
+    </LinearLayout>
+</com.cy.necessaryview.shapeview.RecShapeLinearLayout>

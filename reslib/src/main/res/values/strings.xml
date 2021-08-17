@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--  无需翻译文案  -->
+    <string name="application_name">Stephen MVVM</string>
+    <string name="koala">Stephen</string>
+    <string name="vpn">MVVM</string>
+
+    <!--公共配置文字-->
+    <string name="no_date">No Data</string>
+    <string name="no_data_hint">There is no data!</string>
+    <string name="net_work_connect_fail">Network Unavailable</string>
+    <string name="request_data_exception">Data acquisition failed!</string>
+    <string name="request_data_hidden">Data acquisition failed</string>
+    <string name="request_data_failure">Failed to loading</string>
+    <string name="request_data_refresh">Please refresh the page</string>
+    <string name="not_login_hint">Please login</string>
+    <string name="token_expires_hint">The session has expired!</string>
+    <string name="re_load_data">Reload</string>
+    <string name="re_load_page">Refresh page</string>
+    <string name="data_exception_hint">Abnormal data</string>
+    <string name="fatal_info_title">Fatal Error</string>
+    <string name="fatal_info_content">Abnormal data,please reload</string>
+    <string name="exit_app_txt">Exit App</string>
+
+    <!--业务配置文字-->
+    <string name="get_core_infoing">Obtaining necessary information…</string>
+    <string name="vpn_connected">Connect success</string>
+    <string name="vpn_connect_failed">Connect failed</string>
+    <string name="vpn_disconnected">Disconnect</string>
+    <string name="accelerated_time">This acceleration time： %s</string>
+    <string name="connected_country">Successfully connected to %s </string>
+    <string name="re_accelerate_after_changing_line">Please accelerate after changing the line</string>
+    <string name="cancel">Cancel</string>
+    <string name="confirm">Confirm</string>
+    <string name="notice">Notice</string>
+    <string name="unavailable_area_desc">Due to policy reasons, VPN services are temporarily not available in your region</string>
+    <string name="app_update_title">New Version</string>
+    <string name="app_update_desc">Update content:</string>
+    <string name="app_update_btn">Upgrade</string>
+    <string name="app_update_jump_fail">Upgrade failed, please open Google Play to upgrade!</string>
+    <string name="title_line_list">Select Line</string>
+    <string name="title_ip_view">IP View</string>
+    <string name="item_user_protocol">Terms of Service</string>
+    <string name="item_privacy_protocol">Privacy Policy</string>
+    <string name="item_share">Share</string>
+    <string name="line_load_fail_title">Failed to get line</string>
+    <string name="line_load_fail_desc">Please re-acquire</string>
+    <string name="line_load_fail_btn">Re-acquire</string>
+    <string name="connect">Connection</string>
+    <string name="msg_game_wait_starting">Starting acceleration, please wait</string>
+    <string name="msg_game_now_starting">Starting acceleration, please wait</string>
+    <string name="msg_game_now_acc_ok">Accelerated successfully</string>
+    <string name="msg_game_wait_switching">Switching, please wait</string>
+    <string name="msg_user_info_empty">User information is empty</string>
+    <string name="msg_game_node_empty">Line list is empty</string>
+    <string name="msg_game_node_exception">Abnormal acceleration line</string>
+    <string name="msg_vpn_notconn_node">VPN cannot connect to line</string>
+    <string name="msg_vpn_auth_error">VPN authentication error</string>
+    <string name="msg_vpn_config_fail">Vpn initialization configuration failed</string>
+    <string name="msg_vpn_sys_revoke">Vpn system is forced to exit, please close other accelerators</string>
+    <string name="msg_vpn_force_offline">Vpn is forced offline, please try again</string>
+    <string name="msg_vpn_final_exit">Vpn exit completed</string>
+    <string name="msg_acc_success">Accelerate success</string>
+    <string name="msg_acc_stop_user">Stop accelerating For User</string>
+    <string name="msg_acc_stop_switch">Stop accelerating For Switch</string>
+
+    <string name="share_content">Koala VPN.\nFree&amp;Secure&amp;Unlimited</string>
+
+    <string name="acc_btn_connect">Connect</string>
+    <string name="acc_btn_connecting">Connecting</string>
+    <string name="acc_btn_disconnect">Disconnect</string>
+    <string name="acc_close_hint_info">Are you sure you want to disconnect?</string>
+    <string name="acc_change_hint_info">The line can be switched after disconnection. Are you sure to disconnect?</string>
+    <string name="msg_node_wait_starting">A node is starting to accelerate, please wait</string>
+    <string name="msg_notify_acc_bar_info">Provide you with stable and safe acceleration services</string>
+
+    <string name="main_mode_auto">Auto</string>
+    <string name="main_mode_ss">SS</string>
+    <string name="main_mode_udp">UDP</string>
+    <string name="main_mode_tcp">TCP</string>
+    <string name="acc_before_ip">IP before acceleration</string>
+    <string name="acc_after_ip">IP after acceleration</string>
+    <string name="auto_select">Smart choice</string>
+    <string name="switch_mode">The protocol can only be switched after disconnection. Are you sure to disconnect?</string>
+    <string name="item_about">About</string>
+    <string name="check_update">Check for updates</string>
+    <string name="language_settings">Language Settings</string>
+    <string name="lan_auto">Auto</string>
+    <string name="loading">loading…</string>
+    <string name="help_center">Help Center</string>
+    <string name="no_update">The current version is already the latest version</string>
+
+    <string name="click_continue">Click to continue</string>
+    <!--  TODO: 每次新增文案添加到最后，方便翻译时直接新增  -->
+</resources>

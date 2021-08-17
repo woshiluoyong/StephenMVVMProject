@@ -1,0 +1,38 @@
+{
+  "version": "202107071700",
+  "username": "test",
+  "password": "test",
+  "data": [
+    {
+      "country": "United States",
+      "icon_url": "https://portrait.gitee.com/uploads/avatars/user/0/132_gaoyoubo_1578913733.png!avatar60",
+      "nodes":[
+        {
+          "ip": "100.100.100.100",
+          "name": "United States-01",
+          "acct_port": 2080,
+          "ping_port": 9993
+        }
+      ]
+    },
+    {
+      "country": "Australia",
+      "icon_url": "https://portrait.gitee.com/uploads/avatars/user/447/1343332_easytuan_1578949365.png!avatar60",
+      "nodes":[
+        {
+          "ip": "108.108.108.108",
+          "name": "Australia-01",
+          "acct_port": 2080,
+          "ping_port": 9993
+        },
+        {
+          "ip": "118.118.118.118",
+          "name": "Test-02",
+          "acct_port": 2080,
+          "ping_port": 9993
+        }
+
+      ]
+    }
+  ]
+}

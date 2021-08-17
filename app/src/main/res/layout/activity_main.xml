@@ -1,0 +1,258 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <import type="com.qeeyou.accelerator.overseas.overwall.utils.Constant" />
+
+        <import type="com.qeeyou.accelerator.overseas.overwall.R" />
+
+        <variable
+            name="mainViewModel"
+            type="com.qeeyou.accelerator.overseas.overwall.activitys.viewmodel.MainViewModel" />
+
+        <variable
+            name="toolUtils"
+            type="com.qeeyou.accelerator.overseas.overwall.utils.ToolUtils" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white">
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="250dp"
+            android:background="@mipmap/ic_main_bg_world"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.makeramen.roundedimageview.RoundedImageView
+            android:id="@+id/menuImgV"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:onClick="openDrawer"
+            android:scaleType="fitXY"
+            android:src="@mipmap/ic_main_menu"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:riv_corner_radius="5dp" />
+
+        <com.makeramen.roundedimageview.RoundedImageView
+            android:id="@+id/ipImgV"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            android:onClick="openIpView"
+            android:clickable="@{!mainViewModel.isConnectingOrDisconnecting()}"
+            android:scaleType="fitXY"
+            android:src="@mipmap/ic_main_ip_view"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:riv_corner_radius="5dp" />
+
+        <com.qeeyou.accelerator.overseas.overwall.widgets.MainConnectProgressView
+            android:id="@+id/connectProgressV"
+            android:layout_width="224dp"
+            android:layout_height="224dp"
+            android:layout_marginTop="50dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/menuImgV" />
+
+        <com.cy.necessaryview.shapeview.RecShapeRelativeLayout
+            android:id="@+id/lineAreaRy"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_marginHorizontal="30dp"
+            android:layout_marginTop="10dp"
+            android:onClick="goToLineList"
+            app:layout_constraintTop_toBottomOf="@id/connectProgressV"
+            app:radiusCorner="12dp"
+            app:strokeColor="#EDEDED"
+            app:strokeDashGap="1dp"
+            app:strokeWidth="1dp">
+
+            <com.makeramen.roundedimageview.RoundedImageView
+                android:id="@+id/countryImgV"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="20dp"
+                android:scaleType="fitXY"
+                android:src="@drawable/pic_placeholder_error_shape"
+                app:riv_corner_radius="16dp" />
+
+            <com.makeramen.roundedimageview.RoundedImageView
+                android:id="@+id/imgGo"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="20dp"
+                android:scaleType="fitXY"
+                android:src="@mipmap/ic_line_go" />
+
+            <com.qeeyou.accelerator.overseas.overwall.widgets.RollTextView
+                android:id="@+id/lineNameT"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginHorizontal="16dp"
+                android:layout_toStartOf="@id/imgGo"
+                android:layout_toEndOf="@id/countryImgV"
+                android:ellipsize="marquee"
+                android:gravity="center_vertical|start"
+                android:marqueeRepeatLimit="marquee_forever"
+                android:scrollHorizontally="true"
+                android:singleLine="true"
+                android:text="@string/title_line_list"
+                android:textColor="@color/main_line_text"
+                android:textSize="18sp" />
+        </com.cy.necessaryview.shapeview.RecShapeRelativeLayout>
+
+        <com.cy.necessaryview.shapeview.RecShapeTextView
+            android:id="@+id/vpnOperationBtn"
+            android:layout_width="0dp"
+            android:layout_height="60dp"
+            android:layout_marginTop="33dp"
+            android:gravity="center"
+            android:onClick="onConnectOperation"
+            android:text="@string/acc_btn_connect"
+            android:textColor="@color/white"
+            android:textSize="17sp"
+            app:colorCenter="#6785FF"
+            app:colorEnd="#869BFF"
+            app:colorStart="#4870FF"
+            app:layout_constraintEnd_toEndOf="@id/lineAreaRy"
+            app:layout_constraintStart_toStartOf="@id/lineAreaRy"
+            app:layout_constraintTop_toBottomOf="@id/lineAreaRy"
+            app:radiusCorner="12dp" />
+
+        <LinearLayout
+            android:id="@+id/layoutBannerAd"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent" />
+
+        <com.cy.necessaryview.shapeview.RecShapeTextView
+            android:id="@+id/autoTv"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="50dp"
+            android:clickable="@{!mainViewModel.isConnectingOrDisconnecting()}"
+            android:gravity="center"
+            android:onClick="@{mainViewModel.getOnClickListener(Constant.MODE_AUTO)}"
+            android:paddingVertical="20dp"
+            android:text="@string/main_mode_auto"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toStartOf="@id/guideline1"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/vpnOperationBtn"
+            app:textColorRes="@{mainViewModel.curMode==Constant.MODE_AUTO?R.color.dialog_confirm_bg:R.color.black}" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.25" />
+
+        <com.cy.necessaryview.shapeview.RecShapeTextView
+            android:id="@+id/ssTv"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:clickable="@{!mainViewModel.isConnectingOrDisconnecting()}"
+            android:gravity="center"
+            android:onClick="@{mainViewModel.getOnClickListener(Constant.MODE_SS)}"
+            android:paddingVertical="20dp"
+            android:text="@string/main_mode_ss"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toBottomOf="@id/autoTv"
+            app:layout_constraintEnd_toStartOf="@id/guideline2"
+            app:layout_constraintStart_toEndOf="@id/guideline1"
+            app:layout_constraintTop_toTopOf="@id/autoTv"
+            app:textColorRes="@{mainViewModel.curMode==Constant.MODE_SS?R.color.dialog_confirm_bg:R.color.black}" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.5" />
+
+        <com.cy.necessaryview.shapeview.RecShapeTextView
+            android:id="@+id/udpTv"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:clickable="@{!mainViewModel.isConnectingOrDisconnecting()}"
+            android:gravity="center"
+            android:onClick="@{mainViewModel.getOnClickListener(Constant.MODE_UDP)}"
+            android:paddingVertical="20dp"
+            android:text="@string/main_mode_udp"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toBottomOf="@id/autoTv"
+            app:layout_constraintEnd_toStartOf="@id/guideline3"
+            app:layout_constraintStart_toEndOf="@id/guideline2"
+            app:layout_constraintTop_toTopOf="@id/autoTv"
+            app:textColorRes="@{mainViewModel.curMode==Constant.MODE_UDP?R.color.dialog_confirm_bg:R.color.black}" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.75" />
+
+        <com.cy.necessaryview.shapeview.RecShapeTextView
+            android:id="@+id/tcpTv"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:clickable="@{!mainViewModel.isConnectingOrDisconnecting()}"
+            android:gravity="center"
+            android:onClick="@{mainViewModel.getOnClickListener(Constant.MODE_TCP)}"
+            android:paddingVertical="20dp"
+            android:text="@string/main_mode_tcp"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toBottomOf="@id/autoTv"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/guideline3"
+            app:layout_constraintTop_toTopOf="@id/autoTv"
+            app:textColorRes="@{mainViewModel.curMode==Constant.MODE_TCP?R.color.dialog_confirm_bg:R.color.black}" />
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="16dp"
+            android:background="#DADBDC"
+            app:layout_constraintBottom_toBottomOf="@id/autoTv"
+            app:layout_constraintEnd_toStartOf="@id/ssTv"
+            app:layout_constraintStart_toEndOf="@id/autoTv"
+            app:layout_constraintTop_toTopOf="@id/autoTv" />
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="16dp"
+            android:background="#DADBDC"
+            app:layout_constraintBottom_toBottomOf="@id/autoTv"
+            app:layout_constraintEnd_toStartOf="@id/udpTv"
+            app:layout_constraintStart_toEndOf="@id/ssTv"
+            app:layout_constraintTop_toTopOf="@id/autoTv" />
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="16dp"
+            android:background="#DADBDC"
+            app:layout_constraintBottom_toBottomOf="@id/autoTv"
+            app:layout_constraintEnd_toStartOf="@id/tcpTv"
+            app:layout_constraintStart_toEndOf="@id/udpTv"
+            app:layout_constraintTop_toTopOf="@id/autoTv" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

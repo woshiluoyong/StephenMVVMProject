@@ -1,0 +1,4 @@
+rootProject.name = "StephenMVVMProject"
+include ':mvvm'
+include ':app'
+include ':reslib'

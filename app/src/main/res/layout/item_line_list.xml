@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/mainItemV"
+    android:layout_width="match_parent"
+    android:layout_height="48dp"
+    android:background="@color/white"
+    android:paddingStart="25dp"
+    android:paddingEnd="25dp">
+
+    <Space
+        android:id="@+id/lineSpaceV"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:scaleType="fitXY"
+        android:src="@mipmap/ic_launcher"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <RelativeLayout
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="5dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/lineSpeedT"
+        app:layout_constraintStart_toEndOf="@id/lineSpaceV"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <com.shacharsoftware.rtlmarqueeview.RtlMarqueeView
+            android:id="@+id/lineNameT"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:overScrollMode="never"
+            android:scrollbars="none"
+            app:marqueeEndWaitTicks="30"
+            app:marqueeFadeToColor="@color/white"
+            app:marqueeIsLooping="true"
+            app:marqueeLoops="0"
+            app:marqueeStartWaitTicks="0"
+            app:marqueeTextColor="#333333"
+            app:marqueeTextSize="16dp" />
+
+    </RelativeLayout>
+
+    <com.qeeyou.accelerator.overseas.overwall.widgets.StephenRadioView
+        android:id="@+id/selectRadioV"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/lineSpeedT"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="29dp"
+        android:gravity="center"
+        android:text="9999ms"
+        android:textColor="#919191"
+        android:textSize="16dp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/selectRadioV"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.qeeyou.accelerator.overseas.overwall.widgets.FlowerLoadingView
+        android:id="@+id/pingLoadingV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginEnd="29dp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/selectRadioV"
+        app:layout_constraintTop_toTopOf="parent"
+        app:loading_view_size="16dp" />
+</androidx.constraintlayout.widget.ConstraintLayout>

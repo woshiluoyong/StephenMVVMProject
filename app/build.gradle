@@ -1,0 +1,102 @@
+plugins {
+    id 'com.android.application'
+    id 'kotlin-android'
+    id 'kotlin-android-extensions'
+    id 'kotlin-kapt'
+}
+
+android {
+    compileSdkVersion rootProject.ext.android.compileSdkVersion
+    buildToolsVersion rootProject.ext.android.buildToolsVersion
+
+    defaultConfig {
+        applicationId "com.qeeyou.accelerator.overseas.overwall"
+        minSdkVersion rootProject.ext.android.minSdkVersion
+        targetSdkVersion rootProject.ext.android.targetSdkVersion
+        versionCode rootProject.ext.android.versionCode
+        versionName rootProject.ext.android.versionName
+
+        ndk.abiFilters 'armeabi-v7a', 'arm64-v8a', 'x86', 'x86_64'
+
+        multiDexEnabled true
+    }
+
+    signingConfigs {
+        release {
+            storeFile file("test.jks")
+            storePassword KEYSTORE_PASSWORD_RELEASE
+            keyAlias KEY_ALIAS_RELEASE
+            keyPassword KEY_PASSWORD_RELEASE
+            v1SigningEnabled true
+            v2SigningEnabled true
+        }
+    }
+
+    buildTypes {
+        debug {//测试环境
+            buildConfigField("String", "BASE_URL", '"http://192.168.100.1:8080"')//基本接口
+            minifyEnabled false
+            signingConfig signingConfigs.release
+        }
+        release {//生产环境
+            buildConfigField("String", "BASE_URL", '"http://192.168.100.1:8080"')//基本接口
+            minifyEnabled true
+            signingConfig signingConfigs.release
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    dataBinding {
+        enabled = true
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+    kotlinOptions {
+        jvmTarget = '1.8'
+    }
+
+    //打包后应用名称
+    android.applicationVariants.all { variant ->
+        variant.outputs.all { output ->
+            def outputFile = output.outputFile
+            if (outputFile != null && outputFile.name.endsWith('.apk'))outputFileName = "StephenMVVM_v${rootProject.ext.android.versionName}${variant.buildType.name}${getDate()}.apk"
+        }
+    }
+
+    bundle {
+        language {
+            // We want to be able to switch the locale at runtime using AppLocale!
+            enableSplit = false
+        }
+    }
+}
+
+String getDate() {
+    return (new Date()).format("MMdd_HHmm", TimeZone.getTimeZone("GMT+08:00"))
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation  "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
+    implementation 'androidx.core:core-ktx:1.5.0'
+    implementation 'androidx.appcompat:appcompat:1.3.0'
+    implementation 'com.google.android.material:material:1.3.0'
+    implementation 'androidx.constraintlayout:constraintlayout:2.0.4'
+
+    implementation project(':mvvm')
+    implementation project(':reslib')
+
+    implementation rootProject.ext.dependencies["multidex"]
+    implementation rootProject.ext.dependencies["retrofit2"]
+    implementation rootProject.ext.dependencies["retrofit2-gson"]
+    implementation rootProject.ext.dependencies["retrofit2-adapter"]
+    implementation rootProject.ext.dependencies["shadowLayout"]
+    implementation rootProject.ext.dependencies["updatePlugin"]
+    implementation rootProject.ext.dependencies["smartRefresh"]
+    implementation rootProject.ext.dependencies["recyclerViewHelper"]
+    implementation rootProject.ext.dependencies["rtlmarqueeview"]
+}
