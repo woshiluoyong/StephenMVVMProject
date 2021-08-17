@@ -30,9 +30,6 @@
     <string name="msg_vpn_auth_show">Tampilan jendela pop-up izin VPN</string>
     <string name="msg_vpn_auth_agree">Izin VPN diotorisasi</string>
     <string name="msg_vpn_auth_refused">Izin VPN ditolak, mohon izinkan</string>
-    <string name="application_name">Koala VPN</string>
-    <string name="koala">Koala</string>
-    <string name="vpn">VPN</string>
     <string name="no_date">Tidak</string>
     <string name="no_data_hint">Tidak ada data!</string>
     <string name="net_work_connect_fail">Jaringan Tidak Tersedia</string>
@@ -88,7 +85,7 @@
     <string name="msg_acc_success">Percepat kesuksesan</string>
     <string name="msg_acc_stop_user">Pengguna biasanya berhenti menyebabkan akselerasi berhenti</string>
     <string name="msg_acc_stop_switch">Akselerasi peralihan pengguna menyebabkan akselerasi berhenti</string>
-    <string name="share_content">VPN Koala.\nGratis&amp;Keamanan&amp;Tidak Terbatas</string>
+    <string name="share_content">MVVM Stephen.\nGratis&amp;Keamanan&amp;Tidak Terbatas</string>
     <string name="acc_btn_connect">koneksi</string>
     <string name="acc_btn_connecting">menghubungkan</string>
     <string name="acc_btn_disconnect">Memutuskan</string>

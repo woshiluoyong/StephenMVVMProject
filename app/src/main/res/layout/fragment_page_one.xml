@@ -4,7 +4,7 @@
     <data>
         <variable
             name="userBean"
-            type="com.qeeyou.accelerator.overseas.overwall.beans.UserBean" />
+            type="com.stephen.test.mvvm.framework.beans.UserBean" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout

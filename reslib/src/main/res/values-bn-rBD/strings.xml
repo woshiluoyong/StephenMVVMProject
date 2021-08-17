@@ -30,9 +30,6 @@
     <string name="msg_vpn_auth_show">ভিপিএন অনুমতি পপ-আপ উইন্ডো প্রদর্শন</string>
     <string name="msg_vpn_auth_agree">ভিপিএন অনুমতি অনুমোদিত</string>
     <string name="msg_vpn_auth_refused">ভিপিএন অনুমতি অস্বীকার করা হয়েছে, দয়া করে অনুমোদন দিন</string>
-    <string name="application_name">Koala VPN</string>
-    <string name="koala">Koala</string>
-    <string name="vpn">VPN</string>
     <string name="no_date">না</string>
     <string name="no_data_hint">তথ্য নেই!</string>
     <string name="net_work_connect_fail">অনুপলব্ধ নেটওয়ার্ক</string>

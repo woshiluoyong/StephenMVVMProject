@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <!--  无需翻译文案  -->
-    <string name="application_name">Stephen MVVM</string>
-    <string name="koala">Stephen</string>
-    <string name="vpn">MVVM</string>
+    <string name="application_name" translatable="false">Stephen MVVM</string>
+    <string name="stephen" translatable="false">Stephen</string>
+    <string name="mvvm" translatable="false">MVVM</string>
 
     <!--公共配置文字-->
     <string name="no_date">No Data</string>
@@ -64,7 +64,7 @@
     <string name="msg_acc_stop_user">Stop accelerating For User</string>
     <string name="msg_acc_stop_switch">Stop accelerating For Switch</string>
 
-    <string name="share_content">Koala VPN.\nFree&amp;Secure&amp;Unlimited</string>
+    <string name="share_content">Stephen MVVM.\nFree&amp;Secure&amp;Unlimited</string>
 
     <string name="acc_btn_connect">Connect</string>
     <string name="acc_btn_connecting">Connecting</string>

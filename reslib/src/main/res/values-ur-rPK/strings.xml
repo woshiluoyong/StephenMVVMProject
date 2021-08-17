@@ -30,9 +30,6 @@
     <string name="msg_vpn_auth_show">وی پی این اجازت پاپ اپ ونڈو ڈسپلے</string>
     <string name="msg_vpn_auth_agree">وی پی این کی اجازت مجاز ہے</string>
     <string name="msg_vpn_auth_refused">Vpn اجازت مسترد کردی گئی ، براہ کرم اجازت دیں</string>
-    <string name="application_name">Koala VPN</string>
-    <string name="koala">Koala</string>
-    <string name="vpn">VPN</string>
     <string name="no_date">نہیں</string>
     <string name="no_data_hint">کوئی مواد نہیں!</string>
     <string name="net_work_connect_fail">نیٹ ورک دستیاب نہیں ہے</string>

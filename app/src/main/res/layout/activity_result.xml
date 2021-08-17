@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layout xmlns:app="http://schemas.android.com/apk/res-auto">
     <data>
-        <import type="com.qeeyou.accelerator.overseas.overwall.beans.ResultBean" />
-        <import type="com.qeeyou.accelerator.overseas.overwall.R" />
+        <import type="com.stephen.test.mvvm.framework.beans.ResultBean" />
+        <import type="com.stephen.test.mvvm.framework.R" />
         <import type="android.view.View" />
         <variable
             name="resultBean"
-            type="com.qeeyou.accelerator.overseas.overwall.beans.ResultBean" />
+            type="com.stephen.test.mvvm.framework.beans.ResultBean" />
         <variable
             name="resultViewModel"
-            type="com.qeeyou.accelerator.overseas.overwall.activitys.viewmodel.ResultViewModel" />
+            type="com.stephen.test.mvvm.framework.activitys.viewmodel.ResultViewModel" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"

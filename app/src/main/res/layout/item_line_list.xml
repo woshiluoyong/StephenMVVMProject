@@ -45,7 +45,7 @@
 
     </RelativeLayout>
 
-    <com.qeeyou.accelerator.overseas.overwall.widgets.StephenRadioView
+    <com.stephen.test.mvvm.framework.widgets.StephenRadioView
         android:id="@+id/selectRadioV"
         android:layout_width="24dp"
         android:layout_height="24dp"
@@ -67,7 +67,7 @@
         app:layout_constraintEnd_toStartOf="@id/selectRadioV"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <com.qeeyou.accelerator.overseas.overwall.widgets.FlowerLoadingView
+    <com.stephen.test.mvvm.framework.widgets.FlowerLoadingView
         android:id="@+id/pingLoadingV"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"

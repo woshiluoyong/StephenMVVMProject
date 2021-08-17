@@ -30,7 +30,7 @@
                 android:layout_centerVertical="true"
                 android:src="@drawable/icon_auto_select"
                 app:riv_corner_radius="15dp" />
-            <com.qeeyou.accelerator.overseas.overwall.widgets.RollTextView
+            <com.stephen.test.mvvm.framework.widgets.RollTextView
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:ellipsize="marquee"
@@ -43,7 +43,7 @@
                 android:textSize="16dp"
                 android:layout_marginStart="12dp"
                 android:layout_toEndOf="@id/autoLogoImgV"/>
-            <com.qeeyou.accelerator.overseas.overwall.widgets.StephenRadioView
+            <com.stephen.test.mvvm.framework.widgets.StephenRadioView
                 android:id="@+id/selectRadioV"
                 android:layout_width="24dp"
                 android:layout_height="24dp"

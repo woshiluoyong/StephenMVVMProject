@@ -4,17 +4,17 @@
 
     <data>
 
-        <import type="com.qeeyou.accelerator.overseas.overwall.utils.Constant" />
+        <import type="com.stephen.test.mvvm.framework.utils.Constant" />
 
-        <import type="com.qeeyou.accelerator.overseas.overwall.R" />
+        <import type="com.stephen.test.mvvm.framework.R" />
 
         <variable
             name="mainViewModel"
-            type="com.qeeyou.accelerator.overseas.overwall.activitys.viewmodel.MainViewModel" />
+            type="com.stephen.test.mvvm.framework.activitys.viewmodel.MainViewModel" />
 
         <variable
             name="toolUtils"
-            type="com.qeeyou.accelerator.overseas.overwall.utils.ToolUtils" />
+            type="com.stephen.test.mvvm.framework.utils.ToolUtils" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -57,7 +57,7 @@
             app:layout_constraintTop_toTopOf="parent"
             app:riv_corner_radius="5dp" />
 
-        <com.qeeyou.accelerator.overseas.overwall.widgets.MainConnectProgressView
+        <com.stephen.test.mvvm.framework.widgets.MainConnectProgressView
             android:id="@+id/connectProgressV"
             android:layout_width="224dp"
             android:layout_height="224dp"
@@ -99,7 +99,7 @@
                 android:scaleType="fitXY"
                 android:src="@mipmap/ic_line_go" />
 
-            <com.qeeyou.accelerator.overseas.overwall.widgets.RollTextView
+            <com.stephen.test.mvvm.framework.widgets.RollTextView
                 android:id="@+id/lineNameT"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"

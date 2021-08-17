@@ -30,9 +30,6 @@
     <string name="msg_vpn_auth_show">वीपीएन अनुमति पॉप-अप विंडो डिस्प्ले</string>
     <string name="msg_vpn_auth_agree">वीपीएन अनुमति अधिकृत</string>
     <string name="msg_vpn_auth_refused">वीपीएन अनुमति अस्वीकृत, कृपया अधिकृत करें</string>
-    <string name="application_name">Koala VPN</string>
-    <string name="koala">Koala</string>
-    <string name="vpn">VPN</string>
     <string name="no_date">नहीं न</string>
     <string name="no_data_hint">कोई आकड़ा उपलब्ध नहीं है!</string>
     <string name="net_work_connect_fail">प्रसार अनुपलब्ध है</string>

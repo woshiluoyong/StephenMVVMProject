@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    package="com.qeeyou.accelerator.overseas.overwall">
+    package="com.stephen.test.mvvm.framework">
 
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
 
     <application
-        android:name=".MyApplication"
+        android:name="com.stephen.test.mvvm.framework.MyApplication"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/application_name"
@@ -18,7 +18,7 @@
         android:theme="@style/Theme.PuyMvvm"
         tools:replace="android:label">
         <activity
-            android:name=".activitys.SplashActivity"
+            android:name="com.stephen.test.mvvm.framework.activitys.SplashActivity"
             android:launchMode="singleTask"
             android:configChanges="orientation|screenSize|keyboardHidden|fontScale"
             android:screenOrientation="portrait">
@@ -28,26 +28,26 @@
             </intent-filter>
         </activity>
 
-        <activity android:name=".activitys.MainActivity"
+        <activity android:name="com.stephen.test.mvvm.framework.activitys.MainActivity"
             android:launchMode="singleTask"
             android:configChanges="orientation|screenSize|keyboardHidden|fontScale"
             android:screenOrientation="portrait"/>
-        <activity android:name=".activitys.ResultActivity"
+        <activity android:name="com.stephen.test.mvvm.framework.activitys.ResultActivity"
             android:configChanges="orientation|screenSize|keyboardHidden|fontScale"
             android:screenOrientation="portrait"/>
-        <activity android:name=".activitys.CommWebActivity"
+        <activity android:name="com.stephen.test.mvvm.framework.activitys.CommWebActivity"
             android:configChanges="orientation|screenSize|keyboardHidden|fontScale"
             android:screenOrientation="portrait"/>
-        <activity android:name=".activitys.LineListActivity"
+        <activity android:name="com.stephen.test.mvvm.framework.activitys.LineListActivity"
             android:configChanges="orientation|screenSize|keyboardHidden|fontScale"
             android:screenOrientation="portrait"/>
-        <activity android:name=".activitys.IpViewActivity"
+        <activity android:name="com.stephen.test.mvvm.framework.activitys.IpViewActivity"
             android:configChanges="orientation|screenSize|keyboardHidden|fontScale"
             android:screenOrientation="portrait"/>
-        <activity android:name=".activitys.AboutActivity"
+        <activity android:name="com.stephen.test.mvvm.framework.activitys.AboutActivity"
             android:configChanges="orientation|screenSize|keyboardHidden|fontScale"
             android:screenOrientation="portrait"/>
-        <activity android:name=".activitys.LanguageListActivity"
+        <activity android:name="com.stephen.test.mvvm.framework.activitys.LanguageListActivity"
             android:configChanges="orientation|screenSize|keyboardHidden|fontScale"
             android:screenOrientation="portrait"/>
     </application>
